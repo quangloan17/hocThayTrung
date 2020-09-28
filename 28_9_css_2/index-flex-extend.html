@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+/* Mặc định flex-direction: row là chia theo dòng, flex-direction:column là chia theo cột */
+        div {
+            width: 100px;
+            display: flex;
+            height: 100px;
+        }
+        .green {
+            background-color: green;
+        }
+        .red {
+            background:red;
+            /* 2 thẻ justify-content và align-items để căn ra giữa div */
+            justify-content: center;
+            align-items: center;
+        }
+        .pink {
+            background:pink;
+        }
+        .river {
+            width:400px;
+            height:400px;  /* Tự động bằng 1 nửa chiều dài mặc định */
+            background:yellow;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            /* flex-direction: column; Tự động chia theo cột và dòng và reverse ngược dòng */
+
+        }
+        .clearfix {
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <div class="river">
+        <div class="green">1</div>
+        <div class="red">2</div>
+        <div class="pink">3</div>
+
+    </div>
+</body>
+</html>

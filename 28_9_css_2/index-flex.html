@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* 
+- Để 2 div lên cùng 1 dòng thì phải sử dụng thuộc tính float: left; hoặc là display:inline; 
+- "display:flex" là 1 cách hiệu quả để trình duyệt tự điều chỉnh flex (linh hoạt) lên 1 dòng
+- Khai báo flex=1 thì thuộc tính này sẽ tự động điều chỉnh chiều dài, rộng để phù hợp với div cha
+- Flex giống như 1 tỷ lệ được chia bởi div cha, flex=2 thì sẽ có kích cỡ gấp đôi các div khác
+*/
+
+        div {
+            width: 100px;
+            display: flex;
+            height: 100px;
+        }
+        .green {
+            background-color: green;
+        }
+        .red {
+            background:red;
+        }
+        .pink {
+            background:pink;
+        }
+        .river {
+            width:400px;
+            height:400px;  /* Tự động bằng 1 nửa chiều dài mặc định */
+            background:yellow;
+            display:flex;
+            flex-wrap: wrap; /* Thẻ này giúp việc flex sẽ hạn chế tự động chiều dài để code thêm */
+            flex-shrink: initial;
+        }
+/*
+Hiệu ứng clearfix để dừng chế độ float: left để block ko bị trôi và ko bị mất định dạng chiều cao của div tổng
+ */
+        .clearfix {
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <div class="river">
+        <div class="green"></div>
+        <div class="red"></div>
+        <div class="pink"></div>
+        <div class="green"></div>
+        <div class="red"></div>
+        <div class="pink"></div>
+
+    </div>
+</body>
+</html>
