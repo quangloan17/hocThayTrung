@@ -1,0 +1,12 @@
+/* a[target] {
+    color:green;
+}
+a[target="_blank"] {
+    color:red;
+}
+a:not([href]):not([target]) {
+    color:brown;
+} */
+a:nth-child(odd) {
+    color:purple;
+}
